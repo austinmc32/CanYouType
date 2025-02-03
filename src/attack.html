@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Type to Survive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button class="btn" onclick="window.location.href='../index.html'">Back to Menu</button>
+        <div id="attack-screen" class="screen">
+            <div class="settings-container">
+                <label class="toggle-switch">
+                    Quick Clear
+                    <input type="checkbox" id="quick-clear-toggle" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+            <div class="stats">
+                <div class="stat">Score: <span id="attack-score">0</span></div>
+                <div class="stat">Level: <span id="level">1</span></div>
+            </div>
+            <div class="health-bar">
+                <div id="health-fill" class="health-fill" style="width: 100%"></div>
+            </div>
+            <div class="game-container" id="game-container"></div>
+            <div class="attack-input-container">
+                <input type="text" id="attack-input" class="word-input" autocomplete="off" spellcheck="false">
+            </div>
+        </div>
+        <div id="result-screen" class="screen hidden">
+            <h2>Game Over!</h2>
+            <div class="results">
+                <p>Final Score: <span id="final-score">0</span></p>
+                <p>Level Reached: <span id="final-level">1</span></p>
+                <p>Words Destroyed: <span id="words-destroyed">0</span></p>
+            </div>
+            <button id="retry-btn" class="btn">Try Again</button>
+            <button id="menu-btn" class="btn" onclick="window.location.href='../index.html'">Main Menu</button>
+        </div>
+    </div>
+    <!-- Fix script loading and initialization -->
+    <script src="game.js"></script>
+    <script src="attackMode.js"></script>
+    <script>
+        // Initialize after both scripts are loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            window.game = new TypingGame();
+        });
+    </script>
+</body>
+</html>

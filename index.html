@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Can you type?</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="menu-screen" class="screen">
+            <h1>Can you type?</h1>
+            <div class="mode-select">
+                <button id="classic-btn" class="btn primary-btn" onclick="window.location.href='src/classic.html'">Classic Mode</button>
+                <button id="attack-btn" class="btn primary-btn" onclick="window.location.href='src/attack.html'">Type to Survive</button>
+            </div>
+            <div class="high-scores">
+                <h2>High Scores</h2>
+                <ul id="high-scores-list"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="src/attackMode.js"></script>
+    <script src="src/game.js"></script>
+</body>
+</html>

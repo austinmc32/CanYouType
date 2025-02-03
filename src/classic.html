@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Classic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button class="btn" onclick="window.location.href='../index.html'">Back to Menu</button>
+        <div id="game-screen" class="screen">
+            <div class="stats">
+                <div class="stat">WPM: <span id="wpm">0</span></div>
+                <div class="stat">Accuracy: <span id="accuracy">100%</span></div>
+                <div class="stat">Time: <span id="time">60</span>s</div>
+            </div>
+            
+            <div class="game-area">
+                <div id="word-display" class="word-display"></div>
+                <input type="text" id="word-input" class="word-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            </div>
+
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+        </div>
+
+        <div id="result-screen" class="screen hidden">
+            <h2>Game Over!</h2>
+            <div class="results">
+                <p>Words Per Minute: <span id="final-wpm">0</span></p>
+                <p>Accuracy: <span id="final-accuracy">0%</span></p>
+                <p>Total Words: <span id="total-words">0</span></p>
+                <p>Word Breakdown: <span id="final-words">Perfect: 0 | Almost: 0</span></p>
+            </div>
+            <button id="retry-btn" class="btn">Try Again</button>
+            <button id="menu-btn" class="btn" onclick="window.location.href='../index.html'">Main Menu</button>
+        </div>
+    </div>
+    <script src="attackMode.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
